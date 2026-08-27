@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5.9%;
+    --foreground: 0 0% 90%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 40 36% 57%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 58%;
+    --accent: 40 36% 57%;
+    --accent-foreground: 0 0% 6%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 40 36% 57%;
+    --radius: 0.125rem;
+    --font-heading: "Saira Extra Condensed", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Saira Extra Condensed", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background-color: #0F0F0F;
+  }
+
+  ::selection {
+    background-color: #C5A059;
+    color: #0F0F0F;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: "Saira Extra Condensed", ui-sans-serif, system-ui, sans-serif;
+  }
+  .text-gold { color: #C5A059; }
+  .bg-gold { background-color: #C5A059; }
+  .border-gold { border-color: #C5A059; }
+  .hairline {
+    background: linear-gradient(90deg, transparent, hsl(0 0% 28%), transparent);
+  }
+  .tracking-mega { letter-spacing: 0.3em; }
+  .tracking-ultra { letter-spacing: 0.15em; }
+  .text-shadow-blade { text-shadow: 0 4px 40px rgba(0,0,0,0.8); }
+  .grain { position: relative; }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+```
+
+---
